@@ -112,6 +112,7 @@ class Community < ActiveRecord::Base
   has_many :admins, :through => :community_memberships, :conditions => ['community_memberships.admin = ?', true], :source => :person
   has_many :invitations, :dependent => :destroy
   has_one :location, :dependent => :destroy
+  has_many :community_plans, :dependent => :destroy
   has_many :community_customizations, :dependent => :destroy
   has_many :menu_links, :dependent => :destroy, :order => "sort_priority"
 
@@ -332,6 +333,13 @@ class Community < ActiveRecord::Base
 
   def allows_user_to_send_invitations?(user)
     (users_can_invite_new_users && user.member_of?(self)) || user.has_admin_rights_in?(self)
+  end
+
+  def current_plan
+    community_plans
+      .where(:community_id => self.id)
+      .order("created_at DESC")
+      .first
   end
 
   def has_customizations?

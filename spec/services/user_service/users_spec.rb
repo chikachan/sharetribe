@@ -62,7 +62,7 @@ describe UserService::API::Users do
   end
 
   describe "#delete_user" do
-    let(:user) { Factory.create(:person) }
+    let(:user) { FactoryGirl.create(:person) }
 
     it "removes user data and adds deleted flag" do
       delete_user(user.id)
@@ -71,6 +71,7 @@ describe UserService::API::Users do
       expect(deleted_user.given_name).to be_nil
       expect(deleted_user.family_name).to be_nil
       expect(deleted_user.emails).to be_empty
+      expect(deleted_user.deleted).to be_true
     end
   end
 

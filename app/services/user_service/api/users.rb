@@ -51,6 +51,31 @@ module UserService::API
       return from_model(person)
     end
 
+    def delete_user(id)
+      person = Person.where(id: id).first
+
+      if person.nil?
+        Result::Error("Person with id '#{id}' not found")
+      else
+        # Delete personal information
+        person.update_attributes(
+          given_name: nil,
+          family_name: nil,
+          phone_number: nil,
+          description: nil,
+          facebook_id: nil,
+          deleted: true # Flag deleted
+        )
+
+        # Delete emails
+        person.emails.destroy_all
+
+        # Delete avatar
+        person.image.destroy
+
+        Result::Success
+      end
+    end
 
     # Privates
 

@@ -55,7 +55,7 @@ module UserService::API
       person = Person.where(id: id).first
 
       if person.nil?
-        Result::Error("Person with id '#{id}' not found")
+        Result::Error.new("Person with id '#{id}' not found")
       else
         # Delete personal information
         person.update_attributes(
@@ -64,6 +64,7 @@ module UserService::API
           phone_number: nil,
           description: nil,
           facebook_id: nil,
+          encrypted_password: "",
           deleted: true # Flag deleted
         )
 
@@ -73,7 +74,7 @@ module UserService::API
         # Delete avatar
         person.image.destroy
 
-        Result::Success
+        Result::Success.new
       end
     end
 

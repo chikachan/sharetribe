@@ -1,58 +1,58 @@
 en:
   errors:
     messages:
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      already_confirmed: "was already confirmed, please try signing in"
-      not_locked: "was not locked"
+      expired: "あなたのご登録の有効期限は終了しました。再登録をお願いします"
+      not_found: "見つかりません"
+      already_confirmed: "認証済みです。再度、ログインしてください"
+      not_locked: "ロックされませんでした"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "エラーが1箇所あるため、この%{resource}の保存されませんでした："
+        other: "エラーが%{count}箇所あるため、この%{resource}の保存されませんでした："
   devise:
     failure:
-      already_authenticated: "You are already signed in."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
-      locked: "Your account is locked."
-      invalid: "Invalid email or password."
-      invalid_token: "Invalid authentication token."
-      timeout: "Your session expired, please sign in again to continue."
-      inactive: "Your account was not activated yet."
+      already_authenticated: "すでにログインしています。"
+      unauthenticated: "ご利用を続けるにはログインをする必要があります。"
+      unconfirmed: "ご利用を続けるにはあなたのアカウントを承認する必要があります。"
+      locked: "このアカウントはロックされています。"
+      invalid: "メールアドレスかパスワードのどちらかが正しくありません。"
+      invalid_token: "無効な認証でした。"
+      timeout: "セッションタイムアウトです。ご利用を続けるには再度ログインしてください。"
+      inactive: "アカウントはまだ有効ではありません。"
     passwords:
-      updated_not_active: "Your password was changed successfully."
-      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
-      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
+      updated_not_active: "パスワードが正常に変更されました。"
+      send_paranoid_instructions: "メールアドレスが私達のデータベースに存在する場合、パスワードをリセットするリンクを記載したメールを受け取ります。"
+      send_instructions: "まもなくパスワードをリセットするためのメールを受信します。"
+      updated: "パスワードが正常に変更されて、只今ログイン状態になりました。"
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
+      signed_in: "正常にログインしました。"
+      signed_out: "正常にログアウトしました。"
     confirmations:
-      send_paranoid_instructions: "If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      confirmed: "Your account was successfully confirmed."
+      send_paranoid_instructions: "あなたのメールアドレスが私達のデータベースに存在する場合、アカウント情報を承認する方法について記載したメールを数分後に受信します。"
+      send_instructions: "あなたのアカウントを承認する方法について記載したメールを数分後に受信します。"
+      confirmed: "あなたのアカウントは正常に承認されました。"
     registrations:
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "確認リンクを記載したメールが、メールアドレスに送信されます。それでは、アカウントを有効にするためのリンクをクリックしてください。"
+      signed_up_but_inactive: "あなたのアカウントを有効にするための確認が取れていませんが、ログイン出来ました。"
+      signed_up_but_locked: "あなたのアカウントはロック解除されていませんが、ログイン出来ました。"
       reasons:
         inactive: inactive
         unconfirmed: unconfirmed
         locked: locked
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      signed_up: "Welcome! You have signed up successfully."
-      updated: "You updated your account successfully."
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address.あなたのアカウントが正常に更新されました。ただしこのプロセスを完了するには、メールアドレスを、確認する必要があります。お届けしたメールを確認し、アカウントのご登録完了のために承認リンクをクリックしてください。"
+      signed_up: "Welcome! You have signed up successfully.ようこそ！正常にご登録手続きが完了しました。"
+      updated: "You updated your account successfully.正常にアカウントを更新しました。"
+      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon.アカウントが正常にキャンセルされました。またのご利用をお待ちしております。"
     unlocks:
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.あなたのアカウントが存在する場合、あなたは数分でロックを解除する方法について記載したメールを受信します。"
+      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes.あなたのアカウントのロックを解除する方法について記載したメールを数分後に受信します。"
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue.あなたのアカウントが正常に解除されました。継続するにはログインしてください。"
     omniauth_callbacks:
-      success: "Successfully authorized from %{kind} account."
-      failure: "Could not authorize you from %{kind} because \"%{reason}\"."
+      success: "Successfully authorized from %{kind} account.%{kind}のアカウントが正常に認可されました。"
+      failure: "Could not authorize you from %{kind} because \"%{reason}\".\"%{reason}\の理由で%{kind} のアカウントを許可することができませんでした"
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "Confirmation instructions確認手順"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "Reset password instructionsパスワードをリセットする手順"
       unlock_instructions:
-        subject: "Unlock Instructions"
+        subject: "Unlock Instructionsロック解除手順"

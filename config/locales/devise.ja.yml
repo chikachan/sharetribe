@@ -38,21 +38,21 @@ en:
         inactive: inactive
         unconfirmed: unconfirmed
         locked: locked
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address.あなたのアカウントが正常に更新されました。ただしこのプロセスを完了するには、メールアドレスを、確認する必要があります。お届けしたメールを確認し、アカウントのご登録完了のために承認リンクをクリックしてください。"
-      signed_up: "Welcome! You have signed up successfully.ようこそ！正常にご登録手続きが完了しました。"
-      updated: "You updated your account successfully.正常にアカウントを更新しました。"
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon.アカウントが正常にキャンセルされました。またのご利用をお待ちしております。"
+      update_needs_confirmation: "あなたのアカウントが正常に更新されました。ただしこのお手続きを完了するには、メールアドレスを、確認する必要があります。お届けしたメールを確認し、アカウントのご登録完了のための承認リンクをクリックしてください。"
+      signed_up: "ようこそ！正常にアカウントのご登録手続きが完了しました。"
+      updated: "正常にアカウントを更新しました。"
+      destroyed: "アカウントが正常にキャンセルされました。またのご利用をお待ちしております。"
     unlocks:
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes.あなたのアカウントが存在する場合、あなたは数分でロックを解除する方法について記載したメールを受信します。"
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes.あなたのアカウントのロックを解除する方法について記載したメールを数分後に受信します。"
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue.あなたのアカウントが正常に解除されました。継続するにはログインしてください。"
+      send_paranoid_instructions: "あなたのアカウントが存在する場合、あなたは数分でロックを解除する方法について記載したメールを受信します。"
+      send_instructions: "あなたのアカウントのロックを解除する方法について記載したメールを数分後に受信します。"
+      unlocked: "アカウントが正常に解除されました。継続するにはログインしてください。"
     omniauth_callbacks:
-      success: "Successfully authorized from %{kind} account.%{kind}のアカウントが正常に認可されました。"
-      failure: "Could not authorize you from %{kind} because \"%{reason}\".\"%{reason}\の理由で%{kind} のアカウントを許可することができませんでした"
+      success: "%{kind}のアカウントが正常に認可されました。"
+      failure: "\"%{reason}\の理由で%{kind}のアカウントを許可することができませんでした"
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions確認手順"
+        subject: "確認手順"
       reset_password_instructions:
-        subject: "Reset password instructionsパスワードをリセットする手順"
+        subject: "パスワードをリセットする手順"
       unlock_instructions:
-        subject: "Unlock Instructionsロック解除手順"
+        subject: "ロック解除手順"

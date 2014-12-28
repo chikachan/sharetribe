@@ -35,9 +35,9 @@ en:
       signed_up_but_inactive: "あなたのアカウントを有効にするための確認が取れていませんが、ログイン出来ました。"
       signed_up_but_locked: "あなたのアカウントはロック解除されていませんが、ログイン出来ました。"
       reasons:
-        inactive: inactive
-        unconfirmed: unconfirmed
-        locked: locked
+        inactive: 有効でない
+        unconfirmed: 認証前である
+        locked: ロックされている
       update_needs_confirmation: "あなたのアカウントが正常に更新されました。ただしこのお手続きを完了するには、メールアドレスを、確認する必要があります。お届けしたメールを確認し、アカウントのご登録完了のための承認リンクをクリックしてください。"
       signed_up: "ようこそ！正常にアカウントのご登録手続きが完了しました。"
       updated: "正常にアカウントを更新しました。"
@@ -48,7 +48,7 @@ en:
       unlocked: "アカウントが正常に解除されました。継続するにはログインしてください。"
     omniauth_callbacks:
       success: "%{kind}のアカウントが正常に認可されました。"
-      failure: "\"%{reason}\の理由で%{kind}のアカウントを許可することができませんでした"
+      failure: "\"%{reason}\ため%{kind}のアカウントのご利用を許可することができませんでした。"
     mailer:
       confirmation_instructions:
         subject: "確認手順"
